@@ -68,7 +68,7 @@ def make_banner(path, title, subtitle, tags, art, theme="aurora", emoji_free_kic
     for i, t in enumerate(tags):
         txt = fig.text(x + 0.012, 0.175, t, color="white", fontsize=12, va="center", fontweight="bold")
         w = txt.get_window_extent(renderer).width / fig.bbox.width + 0.024
-        fig.patches.append(FancyBboxPatch((x, 0.13), w, 0.09, boxstyle="round,pad=0,rounding_size=0.04",
+        fig.patches.append(FancyBboxPatch((x, 0.13), w, 0.09, boxstyle="round,pad=0,rounding_size=0.012",
                                           transform=fig.transFigure, facecolor=accents[i % len(accents)], alpha=0.18,
                                           edgecolor=accents[i % len(accents)], lw=1.3))
         x += w + 0.012
